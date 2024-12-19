@@ -1,12 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Second</title>
+    <title>ภาพยนตร์ล่าสุด</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <h1>Welcome to Second Page</h1>
-    <a href="{% url 'home' %}">Back to Home</a>
+    <header>
+        <nav>
+            <div class="logo">MovieMania</div>
+            <ul>
+                <li><a href="{% url 'home' %}">หน้าแรก</a></li>
+                <li><a href="{% url 'second' %}">ภาพยนตร์ล่าสุด</a></li>
+                <li><a href="#">การจอง</a></li>
+                <li><a href="#">ติดต่อเรา</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="movies">
+        <h1>ภาพยนตร์ล่าสุด</h1>
+        <div class="movie-list">
+            <div class="movie">
+                <img src="{% static 'images/movie1.jpg' %}" alt="Movie 1">
+                <h2>หนังเรื่องที่ 1</h2>
+                <p>คำอธิบายสั้น ๆ ของหนัง</p>
+            </div>
+            <div class="movie">
+                <img src="{% static 'images/movie2.jpg' %}" alt="Movie 2">
+                <h2>หนังเรื่องที่ 2</h2>
+                <p>คำอธิบายสั้น ๆ ของหนัง</p>
+            </div>
+            <div class="movie">
+                <img src="{% static 'images/movie3.jpeg' %}" alt="Movie 3">
+                <h2>หนังเรื่องที่ 3</h2>
+                <p>คำอธิบายสั้น ๆ ของหนัง</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 MovieMania. สงวนลิขสิทธิ์</p>
+    </footer>
 </body>
 </html>
