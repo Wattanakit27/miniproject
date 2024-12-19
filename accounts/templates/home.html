@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Welcome to Grocery Store</h1>
+    <a href="{% url 'second' %}">Go to Next Page</a>
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
